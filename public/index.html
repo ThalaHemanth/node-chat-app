@@ -5,6 +5,18 @@
     <title></title>
   </head>
   <body>
-    <h1> You are Genius </h1>
+    <h1> Welcome To Chat App.</h1>
+    <script type="text/javascript" src="/socket.io/socket.io.js">
+    </script>
+    <script type="text/javascript">
+      const socket = io();
+      socket.on('connect', ()=> {
+        console.log('Connected to server');
+      });
+
+      socket.on('disconnect', () => {
+        console.log('Disconnected from the server');
+      });
+    </script>
   </body>
 </html>
